@@ -34,6 +34,10 @@ module.exports = (env, options) => ({
       }
     ]
   },
+  watchOptions: {
+    poll: true,
+    ignored: /node_modules/
+  },
   plugins: [
     new MiniCssExtractPlugin({ filename: '../css/app.css' }),
     new CopyWebpackPlugin([{ from: 'static/', to: '../' }])

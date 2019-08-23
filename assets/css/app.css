@@ -1,3 +1,42 @@
 /* This file is for your main application css. */
 
-@import "../../deps/phoenix_live_view/assets/css/live_view.css";
+.scene {
+    perspective: 640px;
+    perspective-origin: 50% 50%;
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.camera, .world {
+  transform-style: preserve-3d;
+}
+
+.cube {
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: translateY(100px);
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.face.face-front  { background: hsla(  0, 100%, 50%, 0.7); }
+.face.face-right  { background: hsla( 60, 100%, 50%, 0.7); }
+.face.face-back   { background: hsla(120, 100%, 50%, 0.7); }
+.face.face-left   { background: hsla(180, 100%, 50%, 0.7); }
+.face.face-top    { background: hsla(240, 100%, 50%, 0.7); }
+.face.face-bottom { background: hsla(300, 100%, 50%, 0.7); }
+
+.face.face-front  { transform: rotateY(  0deg) translateZ(100px); }
+.face.face-right  { transform: rotateY( 90deg) translateZ(100px); }
+.face.face-back   { transform: rotateY(180deg) translateZ(100px); }
+.face.face-left   { transform: rotateY(-90deg) translateZ(100px); }
+.face.face-top    { transform: rotateX( 90deg) translateZ(100px); }
+.face.face-bottom { transform: rotateX(-90deg) translateZ(100px); }

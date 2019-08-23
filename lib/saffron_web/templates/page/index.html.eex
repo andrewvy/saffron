@@ -1,3 +1,4 @@
 <section>
-3D example
+    3D example
+    <%= live_render(@conn, SaffronWeb.GameLive) %>
 </section>

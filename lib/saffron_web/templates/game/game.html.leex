@@ -1,0 +1,17 @@
+<% {camera_x, camera_y, camera_z} = @camera.position %>
+<% angle = @camera.angle %>
+
+<div class="scene" phx-keydown="keydown" phx-keyup="keyup" phx-target="window">
+    <div class="camera" style="transform: rotateZ(0deg) rotateX(0deg) rotateY(<%= angle %>rad);">
+      <div class="world"  style="transform: translateZ(<%= camera_z %>px) translateX(<%= camera_x %>px) translateY(<%= camera_y %>px);">
+        <div class="cube model">
+            <div class="face face-front"></div>
+            <div class="face face-back"></div>
+            <div class="face face-right"></div>
+            <div class="face face-left"></div>
+            <div class="face face-top"></div>
+            <div class="face face-bottom"></div>
+        </div>
+      </div>
+    </div>
+</div>

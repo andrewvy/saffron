@@ -16,6 +16,9 @@ config :saffron, SaffronWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+config :phoenix,
+  template_engines: [leex: Phoenix.LiveView.Engine]
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
